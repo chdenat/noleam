@@ -1,0 +1,160 @@
+/**CHARTE NOLEAM **/
+
+:root {
+    --bleu-noleam: #22558F;
+    --orange-noleam: #F56929;
+    --vert-noleam: #86DB3D;
+    --jaune-noleam: #F5BE3F;
+    --blanc: #fff;
+    --noir:#000;
+    --blanc-transparent:rgba(244,244,244,0.4);
+}
+
+/** GUTENBERG **/
+
+.has-bleu-noleam-color, .bleu-noleam {
+    color: var(--bleu-noleam) !important;
+}
+
+.has-bleu-noleam-color svg, .bleu-noleam svg{
+    color: var(--bleu-noleam) !important;
+    
+}
+
+.has-bleu-noleam-background-color {
+    background-color: var(--bleu-noleam) !important;
+}
+
+has-jaune-noleam-color, .jaune-noleam {
+    color: var(--jaune-noleam) !important;
+}
+
+.has-jaune-noleam-color svg, .jaune-noleam-color svg {
+    color: var(--jaune-noleam) !important;
+}
+
+.has-jaune-noleam-background-color {
+    background-color: var(--jaune-noleam) !important;
+}
+
+.has-vert-noleam-color, .vert-noleam {
+    color: var(--vert-noleam) !important;
+}
+
+.has-vert-noleam-color svg, .vert-noleam svg{
+    color: var(--vert-noleam) !important;
+}
+
+.has-vert-noleam-background-color {
+    background-color: var(--vert-noleam) !important;
+}
+
+.has-orange-noleam-color, .orange-noleam {
+    color: var(--orange-noleam) !important;
+}
+.has-orange-noleam-color svg, .orange-noleam svg {
+    fill :var(--orange-noleam) !important;
+}
+
+.has-orange-noleam-background-color {
+    background-color: var(--orange-noleam) !important;
+}
+
+.has-blanc-color,.blanc {
+    color: var(--blanc) !important;
+}
+.has-blanc-color svg, .blanc svg {
+    color: var(--blanc) !important;
+}
+
+.has-blanc-background-color {
+    background-color: var(--blanc) !important;
+}
+
+
+/** Surcharge des blocks */
+.dot-hr {
+    border-top: 10px dotted;
+    width: 100%;
+    background-color: transparent !important;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.alignwide {
+    margin-left: -80px;
+    margin-right: -80px;
+}
+
+.alignfull {
+    margin-left: calc(-100vw / 2 + 100% / 2);
+    margin-right: calc(-100vw / 2 + 100% / 2);
+    max-width: 100vw;
+}
+
+.alignfull img {
+    width: 100vw;
+}
+
+
+.wp-block {
+    max-width: 1200px !important;
+    color: var(--bleu-noleam);
+}
+
+.wp-block[data-align="full"] {
+    max-width: none !important;
+    min-width: 100vw !important;
+}
+
+.wp-block[data-align="wide"] {
+    max-width: 1200px !important;
+}
+
+h6 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    font-family: "Dancing Script", serif;
+    line-height: 3rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/** FORMULAIRES */
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+    font-size: 20px;
+    border: none;
+    border-left: 1rem solid transparent;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+    background-color: var(--blanc-transparent);
+    color: var(--blanc);
+    padding: 0.5rem 1rem 0.7rem;
+    width: 100%;
+    display: block;
+    font-size: 1.8rem;
+    height: 3.2rem;
+    line-height: 1.2;
+    margin: 0 0 13px;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-transition: border-color .2s ease-in-out;
+    -moz-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
+}
+
+input[type="text"]:hover, input[type="password"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="email"]:hover, input[type="number"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="time"]:hover, input[type="url"]:hover, textarea:hover {
+    border-left-color: var(--blanc);
+}
+ textarea  {
+     height: 15rem;
+ }
+label {
+    color: var(--blanc
+    );
+}

@@ -1,0 +1,142 @@
+/** GUTENBERG **/
+@font-face {
+    font-family: "Arca Majora";
+    font-weight: bold;
+    src: url('../fonts/ArcaMajora3-Bold.otf');
+}
+
+@font-face {
+    font-family: "Arca Majora";
+    font-weight: 900;
+    src: url('../fonts/ArcaMajora3-Heavy.otf');
+}
+
+.wp-block {
+    max-width: 1200px !important;
+}
+
+.wp-block[data-align="full"] {
+    max-width: none !important;
+}
+
+.wp-block[data-align="wide"] {
+    max-width: 1200px !important;
+}
+
+/*.editor-styles-wrapper p {*/
+/*    font-family: "Raleway", sans-serif;*/
+/*    font-size: 15px;*/
+/*    color: #4A4A4A;*/
+/*    letter-spacing: 0;*/
+/*    line-height: 24px;*/
+/*    font-width: 500;*/
+/*}*/
+
+/*.editor-post-title__block .editor-post-title__input {*/
+/*    font-size: 20px;*/
+/*    font-family: "Arca Majora", sans-serif;*/
+/*    color: #004899;*/
+/*    letter-spacing: 5px;*/
+/*    line-height: 34px;*/
+/*    padding-left: 30px;*/
+/*    background: url(../img/traits.svg) no-repeat;*/
+/*    background-size: 16px 65px;*/
+/*    background-position: left top;*/
+/*    margin-bottom: 30px;*/
+/*    font-weight: 600;*/
+/*    !*text-transform: uppercase;*!*/
+/*}*/
+
+/*.editor-styles-wrapper {*/
+/*    color: #191e23;*/
+/*}*/
+
+/*.editor-styles-wrapper h1 {*/
+/*    font-size: 2.44em;*/
+/*    font-family: "Arca Majora", sans-serif;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*.editor-styles-wrapper h2 {*/
+/*    font-size: 20px;*/
+/*    font-family: "Arca Majora", sans-serif;*/
+/*    color: #004899;*/
+/*    letter-spacing: 5px;*/
+/*    line-height: 34px;*/
+/*    padding-left: 30px;*/
+/*    background: url(../img/traits.svg) no-repeat;*/
+/*    background-size: 16px 32px;*/
+/*    background-position: left top;*/
+/*    margin-bottom: 30px;*/
+/*    font-weight: 600;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*.editor-styles-wrapper h3 {*/
+/*    font-size: 1.56em;*/
+/*    font-family: "Arca Majora", sans-serif;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*.editor-styles-wrapper h4 {*/
+/*    font-size: 1.25em;*/
+/*    font-family: "Arca Majora", sans-serif;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*.editor-styles-wrapper h5 {*/
+/*    font-size: 1em;*/
+/*    font-family: "Arca Majora", sans-serif;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+.editor-styles-wrapper h6 {
+    font-size: .8em;
+    font-family: "Arca Majora", sans-serif;
+    text-transform: uppercase;
+}
+
+
+.editor-styles-wrapper p {
+    font-size: 15px !important;
+    line-height: 24px !important;
+    font-weight: 500 !important;
+    margin-bottom: 10px !important;
+}
+
+.editor-styles-wrapper b, .editor-styles-wrapper strong {
+    color: #004899;
+}
+
+.editor-styles-wrapper ol,
+.editor-styles-wrapper p,
+.editor-styles-wrapper ul {
+    margin-bottom: 10px;
+}
+
+.editor-styles-wrapper ol,
+.editor-styles-wrapper ul {
+    padding: inherit;
+}
+
+.editor-styles-wrapper ol li,
+.editor-styles-wrapper ol ol,
+.editor-styles-wrapper ol ul,
+.editor-styles-wrapper ul li,
+.editor-styles-wrapper ul ol,
+.editor-styles-wrapper ul ul {
+    margin-bottom: 0;
+}
+
+.editor-styles-wrapper ul {
+    list-style-type: disc;
+}
+
+.editor-styles-wrapper ol {
+    list-style-type: decimal;
+}
+
+.editor-styles-wrapper ol ul,
+.editor-styles-wrapper ul ul {
+    list-style-type: circle;
+}
