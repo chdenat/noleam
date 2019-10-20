@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Poppins:200,300,400,500,600,700,800,900|Source+Serif+Pro&display=swap');
+
 /**CHARTE NOLEAM **/
 
 :root {
@@ -101,7 +103,7 @@ has-jaune-noleam-color, .jaune-noleam {
 
 .wp-block {
     max-width: 1200px !important;
-    color: var(--bleu-noleam);
+    color: var(--);
 }
 
 .wp-block[data-align="full"] {
@@ -155,6 +157,23 @@ input[type="text"]:hover, input[type="password"]:hover, input[type="date"]:hover
      height: 15rem;
  }
 label {
-    color: var(--blanc
-    );
+    color: var(--blanc);
+}
+
+/** TEXTE */
+
+body
+{
+    font-family: 'Source Serif Pro', serif;
+    color: #2b2b2b;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--bleu-noleam);
+}
+
+h5,h6 {
+    font-family: 'Dancing-sprint', cursive;
+    color: var(--orange-noleam);
 }
