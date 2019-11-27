@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Poppins:200,300,400,500,600,700,800,900|Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/*
+@font-face {
+    font-family: "Brush";
+    src: url("../fonts/Sophiet.ttf") format("truetype"),
+    url("../fonts/Sophiet.woff") format("woff");
+}
+*/
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
 
 /**CHARTE NOLEAM **/
 
@@ -7,9 +16,20 @@
     --orange-noleam: #F56929;
     --vert-noleam: #86DB3D;
     --jaune-noleam: #F5BE3F;
+    --bleu-clair-noleam: #0072f5;
     --blanc: #fff;
-    --noir:#000;
-    --blanc-transparent:rgba(244,244,244,0.4);
+    --noir: #000;
+    --texte: var(--bleu-noleam) /*#2b2b2b*/;
+    --blanc-transparent: rgba(244, 244, 244, 0.4);
+    --brush:'Caveat Brush';
+
+}
+
+
+/** BOOTSTRAP **/
+
+.bg-primary {
+    background-color: var(--bleu-noleam) !important;
 }
 
 /** GUTENBERG **/
@@ -18,16 +38,29 @@
     color: var(--bleu-noleam) !important;
 }
 
-.has-bleu-noleam-color svg, .bleu-noleam svg{
+.has-bleu-noleam-color svg, .bleu-noleam svg {
     color: var(--bleu-noleam) !important;
-    
+
 }
 
 .has-bleu-noleam-background-color {
     background-color: var(--bleu-noleam) !important;
 }
 
-has-jaune-noleam-color, .jaune-noleam {
+.has-bleu-clair-noleam-color, .bleu-clair-noleam, .has-bleu-clair-noleam-color strong, .has-bleu-noleam-color strong{
+    color: var(--bleu-clair-noleam) !important;
+}
+
+.has-bleu-clair-noleam-color svg, .bleu-clair-noleam svg {
+    color: var(--bleu-clair-noleam) !important;
+
+}
+
+.has-bleu-clair-noleam-background-color {
+    background-color: var(--bleu-clair-noleam) !important;
+}
+
+.has-jaune-noleam-color, .jaune-noleam, .has-jaune-noleam-color strong{
     color: var(--jaune-noleam) !important;
 }
 
@@ -39,11 +72,11 @@ has-jaune-noleam-color, .jaune-noleam {
     background-color: var(--jaune-noleam) !important;
 }
 
-.has-vert-noleam-color, .vert-noleam {
+.has-vert-noleam-color, .vert-noleam, .has-vert-noleam-color strong {
     color: var(--vert-noleam) !important;
 }
 
-.has-vert-noleam-color svg, .vert-noleam svg{
+.has-vert-noleam-color svg, .vert-noleam svg {
     color: var(--vert-noleam) !important;
 }
 
@@ -51,20 +84,22 @@ has-jaune-noleam-color, .jaune-noleam {
     background-color: var(--vert-noleam) !important;
 }
 
-.has-orange-noleam-color, .orange-noleam {
+.has-orange-noleam-color, .orange-noleam, .has-orange-noleam-color strong {
     color: var(--orange-noleam) !important;
 }
+
 .has-orange-noleam-color svg, .orange-noleam svg {
-    fill :var(--orange-noleam) !important;
+    fill: var(--orange-noleam) !important;
 }
 
 .has-orange-noleam-background-color {
     background-color: var(--orange-noleam) !important;
 }
 
-.has-blanc-color,.blanc {
+.has-blanc-color, .blanc, .has-blanc-color strong {
     color: var(--blanc) !important;
 }
+
 .has-blanc-color svg, .blanc svg {
     color: var(--blanc) !important;
 }
@@ -96,10 +131,10 @@ has-jaune-noleam-color, .jaune-noleam {
     max-width: 100vw;
 }
 
-.alignfull img {
+/*.alignfull img {
     width: 100vw;
 }
-
+*/
 
 .wp-block {
     max-width: 1200px !important;
@@ -115,14 +150,18 @@ has-jaune-noleam-color, .jaune-noleam {
     max-width: 1200px !important;
 }
 
-h6 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 3rem;
-    font-family: "Dancing Script", serif;
-    line-height: 3rem;
-    text-transform: none;
-    letter-spacing: 0;
+/** Button **/
+
+.wp-block-button__link {
+    font-family: Poppins;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none !important;
+}
+
+.wp-block-button__link:hover {
+    background: var(--bleu-noleam) !important;
+    color: white !important;
 }
 
 /** FORMULAIRES */
@@ -153,27 +192,102 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 input[type="text"]:hover, input[type="password"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="email"]:hover, input[type="number"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="time"]:hover, input[type="url"]:hover, textarea:hover {
     border-left-color: var(--blanc);
 }
- textarea  {
-     height: 15rem;
- }
+
+textarea {
+    height: 15rem;
+}
+
 label {
     color: var(--blanc);
 }
 
 /** TEXTE */
 
-body
-{
-    font-family: 'Source Serif Pro', serif;
-    color: #2b2b2b;
-}
-
-h1,h2,h3,h4 {
+body {
     font-family: 'Poppins', sans-serif;
-    color: var(--bleu-noleam);
+    font-size: 1.2rem;
+    line-height: 1.1;
+    font: 200;
+    color: var(--texte);
 }
 
-h5,h6 {
-    font-family: 'Dancing-sprint', cursive;
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--bleu-clair-noleam);
+    font-weight: 700;
+    letter-spacing: 0px;
+
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h5, h6 {
     color: var(--orange-noleam);
+    font-weight: normal;
+}
+
+h6 {
+    font-size: 2rem;
+}
+
+p strong {
+    color:var(--bleu-clair-noleam)
+}
+
+.wrapper {
+    padding: 0;
+}
+
+.brush {
+    font-family: var(--brush);
+    font-weight: normal;
+    transform: skewY(-5deg);
+}
+
+h2.brush {
+    font-size: 3rem;
+}
+
+.brush.retrait-1 {
+    margin-top: -1rem;
+}
+
+.brush.retrait-15 {
+    margin-top: -1.5rem;
+}
+
+.brush.retrait-2 {
+    margin-top: -2rem;
+}
+
+/** Zone contact */
+
+.contacts a {
+    color: white !important;
+}
+
+.contact-form button {
+    border: 2px solid white;
+    background: transparent;
+    float: right;
+    text-transform: uppercase;
+
+}
+
+.contact-form button:hover {
+    background-color: white !important;
+    color: var(--orange-noleam) !important;
+
+}
+
+/** COBLOCKS */
+
+.wp-block-coblocks-accordion-item summary
+
+/** Menu */
+.navbar-nav .nav-link{
+    width: 7rem;
+    font-weight: bold;
 }

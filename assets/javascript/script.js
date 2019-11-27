@@ -5,11 +5,9 @@ jQuery(function($) {
     // Run the script once the document is ready
     $(document).ready(function() {
 
-    });
+         sticky_options.stickyBlock = "#wrapper-navbar"  ;
+         console.log(sticky_options);
 
-    // Run the script once the window finishes loading
-    $(window).load(function(){
-        
     });
 
 
