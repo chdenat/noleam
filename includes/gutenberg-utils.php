@@ -13,27 +13,27 @@ add_theme_support( 'editor-color-palette', [
 		[
 			'name'  => 'Bleu',
 			'slug'  => 'bleu-noleam',
-			'color' => '#004899',
+			'color' => '#1072B3',
 		],
 		[
 			'name'  => 'Bleu Clair',
 			'slug'  => 'bleu-clair-noleam',
-			'color' => '#0072f5',
+			'color' => '#61BFFF',
 		],
 		[
 			'name'  => 'Orange',
 			'slug'  => 'orange-noleam',
-			'color' => '#ff3a2d',
+			'color' => '#FF4B45',
 		],
 		[
 			'name'  => 'Vert',
 			'slug'  => 'vert-noleam',
-			'color' => '#81d742',
+			'color' => '#9AB345',
 		],
 		[
 			'name'  => 'Jaune',
 			'slug'  => 'jaune-noleam',
-			'color' => '#ffcc00',
+			'color' => '#CCA640',
 		],
 		[
 			'name'  => 'Blanc',

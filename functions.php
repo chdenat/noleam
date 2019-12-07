@@ -3,9 +3,6 @@
 namespace NOLEAM\THEME;
 
 
-use function NOLEAM\DEV\debug_;
-use function NOLEAM\DEV\echo_;
-
 define( 'ASSETS', '/assets/' );
 define( 'THEME_INC', __DIR__ . '/includes/' );
 define( 'THEME_CSS', __DIR__ . ASSETS . 'css/' );
@@ -30,8 +27,10 @@ function theme_enqueue() {
 	//wp_enqueue_style( 'child-style', CSS_DIR . '/style.css', array( $parent_style ) );
 	wp_enqueue_style( 'charte', CSS_DIR . '/charte.css', array( $parent_style ) );
 
-	wp_enqueue_script( 'sticker', JS_DIR . '/jquery.sticky.js');
 	wp_enqueue_script( 'noleam', JS_DIR . '/script.js' );
+	wp_enqueue_script( 'fa-pro', "https://kit.fontawesome.com/e4a29cef7a.js" );
+
+	//script src="https://kit.fontawesome.com/e4a29cef7a.js" crossorigin="anonymous"></script>
 
 }
 add_action( 'wp_enqueue_scripts', 'NOLEAM\THEME\theme_enqueue', 1000 );

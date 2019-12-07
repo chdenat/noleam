@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
 
     // On encadre le bloc ciblé par une DIV nécessaire pour faire l'effet sticky
     $(sticky_options.stickyBlock).wrap('<div class="' + sticky_options.stickyBlockClass + '"></div>');
-
+    console.log('ok');
     // On prend les dimensions par défaut du bloc (hauteur dynamique)
     var heightSticky = Math.round($(sticky_options.stickyBlock).outerHeight());
 

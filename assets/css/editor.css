@@ -21,15 +21,15 @@
     font-family: 'Source Serif Pro', serif;
     font-size: 1.2rem;
     line-height: 1.1;
-    color: var(--texte);
+    color: var(--couleur-texte);
 }
 
 .editor-styles-wrapper {
-    color: var(--texte);
+    color: var(--couleur-texte);
 }
 
 .editor-post-title__block .editor-post-title__input, .editor-styles-wrapper h2, .editor-styles-wrapper h3, .editor-styles-wrapper h4 {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--texte-titre), sans-serif;
     color: var(--bleu-noleam) !important;
     font-weight: 700 !important;
     letter-spacing: 0 !important;
@@ -50,10 +50,10 @@ h2 {
 
 
 .editor-styles-wrapper p {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--texte-titre), sans-serif;
     font-size: 1.2rem;
     line-height: 1.1;
-    color: var(--texte);
+    color: var(--couleur-texte);
 }
 
 .editor-styles-wrapper p strong{
@@ -61,7 +61,7 @@ h2 {
 }
 
 .editor-styles-wrapper b, .editor-styles-wrapper strong {
-    color: var(--texte);
+    color: var(--couleur-texte);
 }
 
 .editor-styles-wrapper ol,

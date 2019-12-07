@@ -1,28 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-
-/*
-@font-face {
-    font-family: "Brush";
-    src: url("../fonts/Sophiet.ttf") format("truetype"),
-    url("../fonts/Sophiet.woff") format("woff");
-}
-*/
+@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
+
+@font-face {
+    font-family: "Hucklebuck JF Regular";
+    src: url("../fonts/Hucklebuck-JF-Regular.ttf") ;
+}
+
+@font-face {
+    font-family: "DIN Pro Bold";
+    src: url("../fonts/DINPro-Bold.ttf") ;
+}
 
 /**CHARTE NOLEAM **/
 
 :root {
-    --bleu-noleam: #22558F;
-    --orange-noleam: #F56929;
-    --vert-noleam: #86DB3D;
-    --jaune-noleam: #F5BE3F;
-    --bleu-clair-noleam: #0072f5;
+    --bleu-noleam: #1072B3;
+    --orange-noleam: #FF4B45;
+    --vert-noleam: #9AB345;
+    --jaune-noleam: #CCA640;
+    --bleu-clair-noleam: #61BFFF;
     --blanc: #fff;
     --noir: #000;
-    --texte: var(--bleu-noleam) /*#2b2b2b*/;
     --blanc-transparent: rgba(244, 244, 244, 0.4);
-    --brush:'Caveat Brush';
-
+    /*--brush:'Caveat Brush';*/
+    --brush: 'Hucklebuck JF Regular';
+    --texte-principal: 'Frank Ruhl Libre';
+    --texte-titre: 'DIN Pro Bold';
+    --couleur-texte: var(--bleu-noleam) /*#2b2b2b*/;
 }
 
 
@@ -47,7 +52,7 @@
     background-color: var(--bleu-noleam) !important;
 }
 
-.has-bleu-clair-noleam-color, .bleu-clair-noleam, .has-bleu-clair-noleam-color strong, .has-bleu-noleam-color strong{
+.has-bleu-clair-noleam-color, .bleu-clair-noleam, .has-bleu-clair-noleam-color strong, .has-bleu-noleam-color strong {
     color: var(--bleu-clair-noleam) !important;
 }
 
@@ -60,7 +65,7 @@
     background-color: var(--bleu-clair-noleam) !important;
 }
 
-.has-jaune-noleam-color, .jaune-noleam, .has-jaune-noleam-color strong{
+.has-jaune-noleam-color, .jaune-noleam, .has-jaune-noleam-color strong {
     color: var(--jaune-noleam) !important;
 }
 
@@ -138,7 +143,7 @@
 
 .wp-block {
     max-width: 1200px !important;
-    color: var(--);
+    /*color: var(--);*/
 }
 
 .wp-block[data-align="full"] {
@@ -155,13 +160,14 @@
 .wp-block-button__link {
     font-family: Poppins;
     font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none !important;
+    texte-transform: uppercase;
+    texte-decoration: none !important;
 }
 
 .wp-block-button__link:hover {
-    background: var(--bleu-noleam) !important;
+    background: var(--orange-noleam) !important;
     color: white !important;
+    text-decoration: none;
 }
 
 /** FORMULAIRES */
@@ -178,7 +184,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     padding: 0.5rem 1rem 0.7rem;
     width: 100%;
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     height: 3.2rem;
     line-height: 1.2;
     margin: 0 0 13px;
@@ -204,15 +210,15 @@ label {
 /** TEXTE */
 
 body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.1;
-    font: 200;
-    color: var(--texte);
+    font-family: var(--texte-principal), sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    font-weight: 500;
+    color: var(--couleur-texte);
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--texte-titre), sans-serif;
     color: var(--bleu-clair-noleam);
     font-weight: 700;
     letter-spacing: 0px;
@@ -233,11 +239,12 @@ h6 {
 }
 
 p strong {
-    color:var(--bleu-clair-noleam)
+    color: var(--bleu-clair-noleam)
 }
 
 .wrapper {
     padding: 0;
+
 }
 
 .brush {
@@ -282,12 +289,103 @@ h2.brush {
 
 }
 
+/** GETWID */
+
+@media screen and (max-width: 691px) {
+    /** mettre une classe welcome sur le header de l'accueil */
+    .welcome .wp-block-getwid-section__background-holder .wp-block-getwid-section__background {
+        background-position: right center !important;
+    }
+}
+
+
 /** COBLOCKS */
 
-.wp-block-coblocks-accordion-item summary
 
-/** Menu */
-.navbar-nav .nav-link{
-    width: 7rem;
+/** MENUS */
+.wrapper {
+    margin-top: -85px;
+}
+
+#wrapper-navbar {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 75px;
+    background: transparent;
+}
+
+#wrapper-navbar.is-fixed {
+    position: fixed;
+    animation-name: stickySlideDown;
+    padding: 0;
+    transition: none;
+    width: 100%;
+    height: 75px;
+    margin-top: 0;
+    background-color: var(--bleu-noleam);
+}
+
+#wrapper-navbar.is-fixed + .wrapper {
+    margin-top: 0;
+}
+
+#wrapper-navbar.is-fixed .navbar {
+    background-color: var(--bleu-noleam);
+}
+
+#wrapper-navbar .custom-logo-link {
+    height: 100px !important;
+}
+
+#wrapper-navbar .custom-logo-link img {
+    height: 100px !important;
+    width: auto !important;
+}
+
+#wrapper-navbar.is-fixed .custom-logo-link {
+    height: 50px !important;
+}
+
+#wrapper-navbar.is-fixed .custom-logo-link img {
+    height: 50px !important;
+}
+
+@keyframes stickySlideDown {
+    0% {
+        opacity: 0.1;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar-nav .nav-link {
+    /* width: 8rem;*/
     font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: var(--texte-titre);
+    color: rgba(255, 255, 255, 1);
+    font-weight: normal;
+    margin-left: 0.5rem;
+}
+
+navbar-dark .navbar-nav .nav-link i {
+    margin-right: 0.5rem;
+}
+
+#navbarNavDropdown {
+    background: var(--bleu-noleam)
+}
+
+@media screen and (min-width: 691px) {
+    #navbarNavDropdown {
+        background: transparent;
+    }
 }
