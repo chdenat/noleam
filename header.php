@@ -8,6 +8,8 @@
  */
 
 // Exit if accessed directly.
+use function NOLEAM\add_header;
+
 defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
@@ -78,10 +80,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-				<?php if ( 'container' == $container ) : ?>
+	            <?php if ( 'container' == $container ) : ?>
             </div><!-- .container -->
-		<?php endif; ?>
+        <?php endif; ?>
 
         </nav><!-- .site-navigation -->
 
     </div><!-- #wrapper-navbar end -->
+	<?php add_header(); ?>
+

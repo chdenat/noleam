@@ -29,9 +29,6 @@ function theme_enqueue() {
 
 	wp_enqueue_script( 'noleam', JS_DIR . '/script.js' );
 	wp_enqueue_script( 'fa-pro', "https://kit.fontawesome.com/e4a29cef7a.js" );
-
-	//script src="https://kit.fontawesome.com/e4a29cef7a.js" crossorigin="anonymous"></script>
-
 }
 add_action( 'wp_enqueue_scripts', 'NOLEAM\THEME\theme_enqueue', 1000 );
 
@@ -43,10 +40,26 @@ add_filter( 'https_local_ssl_verify', '__return_false' );
 
 function block_public( $args, $post_type ) {
 	if ( 'wp_block' === $post_type ) {
-	$args['public'] = true;
+		$args['public'] = true;
 	}
+
 	return $args;
 }
 
 //add_filter( 'register_post_type_args', 'NOLEAM\THEME\block_public', 10, 2 );
 
+/**
+ *
+ * Add svg mime type
+ *
+ * @param $mimes
+ *
+ * @return mixed
+ */
+function cc_mime_types( $mimes ) {
+	$mimes['svg'] = 'image/svg+xml';
+
+	return $mimes;
+}
+
+add_filter( 'upload_mimes', 'NOLEAM\THEME\cc_mime_types' );

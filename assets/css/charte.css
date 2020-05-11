@@ -298,6 +298,9 @@ h2.brush {
     }
 }
 
+.wp-block-getwid-icon-box .wp-block-getwid-icon-box__icon-container i {
+    width: auto !important;
+}
 
 /** COBLOCKS */
 
@@ -341,8 +344,12 @@ h2.brush {
 }
 
 #wrapper-navbar .custom-logo-link img {
-    height: 100px !important;
+    height: 70px !important;
     width: auto !important;
+}
+
+.home #wrapper-navbar .custom-logo-link img {
+    display: none;
 }
 
 #wrapper-navbar.is-fixed .custom-logo-link {
@@ -351,6 +358,7 @@ h2.brush {
 
 #wrapper-navbar.is-fixed .custom-logo-link img {
     height: 50px !important;
+    display: block;
 }
 
 @keyframes stickySlideDown {

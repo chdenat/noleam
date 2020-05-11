@@ -8,7 +8,6 @@
  */
 
 // Exit if accessed directly.
-use NOLEAM\ACF\HEADER\Block_Header;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -28,13 +27,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <main class="site-main" id="main" role="main">
 
 					<?php while ( have_posts() ) : the_post(); ?>
-                        <div id="header">
-							<?php
-							if ( get_field( 'add-header' ) ) {
-								( new Block_Header() )->display();
-							}
-							?>
-                        </div>
 						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
 						<?php
