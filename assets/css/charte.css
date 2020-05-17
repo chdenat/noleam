@@ -397,3 +397,9 @@ navbar-dark .navbar-nav .nav-link i {
         background: transparent;
     }
 }
+
+/** code **/
+
+code.hljs {
+    font-size: 0.9rem;
+}
