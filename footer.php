@@ -19,11 +19,14 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="col-md-12">
                 <footer class="site-footer" id="colophon">
                     <div class="site-info">
-						<?=
-						apply_filters( 'the_content', get_posts( [
+						<?php
+						$posts = get_posts( [
 							'post_type' => 'wp_block',
 							'title'     => 'footer'
-						] )[0]->post_content )
+						] );
+						if ( ! empty( $posts ) ) {
+							apply_filters( 'the_content', $posts[0]->post_content );
+						}
 						?>
                     </div>
                 </footer>
