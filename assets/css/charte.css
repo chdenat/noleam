@@ -15,19 +15,28 @@
 /**CHARTE NOLEAM **/
 
 :root {
+    --name-bleu-noleam: "Blue";
     --bleu-noleam: #1072B3;
+    --name-orange-noleam: "Orange";
     --orange-noleam: #FF4B45;
+    --name-vert-noleam: "Green";
     --vert-noleam: #9AB345;
+    --name-jaune-noleam: "Yellow";
     --jaune-noleam: #CCA640;
+    --name-bleu-clair-noleam: "Bleu";
     --bleu-clair-noleam: #61BFFF;
+    --name-blanc: "White";
     --blanc: #fff;
+    --name-noir: "Black";
     --noir: #000;
+    --name-couleur-texte: "Text";
+    --couleur-texte: var(--bleu-noleam) /*#2b2b2b*/;
+    --name-blanc-transparent: "White 40%";
     --blanc-transparent: rgba(244, 244, 244, 0.4);
-    /*--brush:'Caveat Brush';*/
+
     --brush: 'Hucklebuck JF Regular';
     --texte-principal: 'Frank Ruhl Libre';
     --texte-titre: 'DIN Pro Bold';
-    --couleur-texte: var(--bleu-noleam) /*#2b2b2b*/;
 }
 
 
@@ -36,83 +45,6 @@
 .bg-primary {
     background-color: var(--bleu-noleam) !important;
 }
-
-/** GUTENBERG **/
-
-.has-bleu-noleam-color, .bleu-noleam {
-    color: var(--bleu-noleam) !important;
-}
-
-.has-bleu-noleam-color svg, .bleu-noleam svg {
-    color: var(--bleu-noleam) !important;
-
-}
-
-.has-bleu-noleam-background-color {
-    background-color: var(--bleu-noleam) !important;
-}
-
-.has-bleu-clair-noleam-color, .bleu-clair-noleam, .has-bleu-clair-noleam-color strong, .has-bleu-noleam-color strong {
-    color: var(--bleu-clair-noleam) !important;
-}
-
-.has-bleu-clair-noleam-color svg, .bleu-clair-noleam svg {
-    color: var(--bleu-clair-noleam) !important;
-
-}
-
-.has-bleu-clair-noleam-background-color {
-    background-color: var(--bleu-clair-noleam) !important;
-}
-
-.has-jaune-noleam-color, .jaune-noleam, .has-jaune-noleam-color strong {
-    color: var(--jaune-noleam) !important;
-}
-
-.has-jaune-noleam-color svg, .jaune-noleam-color svg {
-    color: var(--jaune-noleam) !important;
-}
-
-.has-jaune-noleam-background-color {
-    background-color: var(--jaune-noleam) !important;
-}
-
-.has-vert-noleam-color, .vert-noleam, .has-vert-noleam-color strong {
-    color: var(--vert-noleam) !important;
-}
-
-.has-vert-noleam-color svg, .vert-noleam svg {
-    color: var(--vert-noleam) !important;
-}
-
-.has-vert-noleam-background-color {
-    background-color: var(--vert-noleam) !important;
-}
-
-.has-orange-noleam-color, .orange-noleam, .has-orange-noleam-color strong {
-    color: var(--orange-noleam) !important;
-}
-
-.has-orange-noleam-color svg, .orange-noleam svg {
-    fill: var(--orange-noleam) !important;
-}
-
-.has-orange-noleam-background-color {
-    background-color: var(--orange-noleam) !important;
-}
-
-.has-blanc-color, .blanc, .has-blanc-color strong {
-    color: var(--blanc) !important;
-}
-
-.has-blanc-color svg, .blanc svg {
-    color: var(--blanc) !important;
-}
-
-.has-blanc-background-color {
-    background-color: var(--blanc) !important;
-}
-
 
 /** Surcharge des blocks */
 .dot-hr {
@@ -401,5 +333,6 @@ navbar-dark .navbar-nav .nav-link i {
 /** code **/
 
 code.hljs {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
 }
