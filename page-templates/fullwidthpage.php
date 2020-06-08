@@ -8,6 +8,7 @@
  */
 
 // Exit if accessed directly.
+use NOLEAM\ACF\HEADER\Block_Header;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -15,7 +16,7 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
+<div class="wrapper main-content" id="full-width-page-wrapper">
 
 
     <div class="<?php echo esc_attr( $container ); ?>" id="content">
@@ -27,7 +28,25 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <main class="site-main" id="main" role="main">
 
 					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+                        <div id="header">
+							<?php
+							$header = new Block_Header();
+							if ( get_field( 'add-header' ) ) {
+								$header->display_header();
+							} else {
+								$header->small_header();
+							}
+
+							/*** Hook __after_header **/
+							?>
+                        </div>
+						<?php
+						if ( function_exists( "is_shop" ) && is_shop() ) {
+							get_template_part( 'loop-templates/shop', 'page' );
+						} else {
+							get_template_part( 'loop-templates/content', 'page' );
+
+						} ?>
 
 						<?php
 						// If comments are open or we have at least one comment, load up the comment template.
@@ -38,13 +57,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php endwhile; // end of the loop. ?>
 
-				</main><!-- #main -->
+                </main><!-- #main -->
 
-			</div><!-- #primary -->
+            </div><!-- #primary -->
 
-		</div><!-- .row end -->
+        </div><!-- .row end -->
 
-	</div><!-- #content -->
+    </div><!-- #content -->
 
 </div><!-- #full-width-page-wrapper -->
 
