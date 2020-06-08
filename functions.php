@@ -3,40 +3,45 @@
 namespace NOLEAM\THEME;
 
 
+use NOLEAM\CSS\Palette_Synchroniser;
+
+define( 'THEME_PATH', __DIR__ );
+define( 'THEME_URL', get_stylesheet_directory_uri() ) . '/';
+
 define( 'ASSETS', '/assets/' );
-define( 'THEME_INC', __DIR__ . '/includes/' );
-define( 'THEME_CSS', __DIR__ . ASSETS . 'css/' );
-define( 'THEME_JS', __DIR__ . ASSETS . 'javascript/' );
+define( 'THEME_INC_PATH_URL', THEME_URL . '/includes/' );
+define( 'THEME_CSS_URL', THEME_URL . ASSETS . 'css/' );
+define( 'THEME_JS_URL', THEME_URL . ASSETS . 'javascript/' );
 
-define( 'THEME_DIR', get_stylesheet_directory_uri() ) . '/';
-define( 'ASSETS_DIR', THEME_DIR . ASSETS );
-define( 'CSS_DIR', ASSETS_DIR . '/css' );
-define( 'JS_DIR', ASSETS_DIR . '/javascript' );
+define( 'THEME_ASSETS_PATH', THEME_PATH . ASSETS );
+define( 'THEME_CSS_PATH', THEME_ASSETS_PATH . '/css' );
+define( 'THEME_JS_PATH', THEME_ASSETS_PATH . '/javascript' );
+define( 'THEME_INC_PATH', THEME_PATH . '/includes/' );
 
-require_once THEME_INC . '/customizer.php';
+
+require_once THEME_INC_PATH . '/customizer.php';
 
 
 if ( is_admin() ) {
-	require_once THEME_INC . 'gutenberg-utils.php';
+	require_once THEME_INC_PATH . 'gutenberg-utils.php';
 }
 
 
 function theme_enqueue() {
 	$parent_style = 'parent-style';
 	wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-	//wp_enqueue_style( 'child-style', CSS_DIR . '/style.css', array( $parent_style ) );
-	wp_enqueue_style( 'charte', CSS_DIR . '/charte.css', array( $parent_style ) );
+	//wp_enqueue_style( 'child-style', THEME_CSS_URL . '/style.css', array( $parent_style ) );
+	wp_enqueue_style( 'charte', THEME_CSS_URL . '/charte.css', array( $parent_style ) );
 
-	wp_enqueue_script( 'noleam', JS_DIR . '/script.js' );
+	wp_enqueue_script( 'noleam', THEME_JS_URL . '/script.js' );
 	wp_enqueue_script( 'fa-pro', "https://kit.fontawesome.com/e4a29cef7a.js" );
 }
-add_action( 'wp_enqueue_scripts', 'NOLEAM\THEME\theme_enqueue', 1000 );
+
+add_action( 'wp_enqueue_scripts', 'NOLEAM\THEME\theme_enqueue', 11 );
 
 
 // Enable shortcodes in text widgets
 add_filter( 'widget_text', 'do_shortcode' );
-add_filter( 'https_ssl_verify', '__return_false' );
-add_filter( 'https_local_ssl_verify', '__return_false' );
 
 function block_public( $args, $post_type ) {
 	if ( 'wp_block' === $post_type ) {
@@ -63,3 +68,25 @@ function cc_mime_types( $mimes ) {
 }
 
 add_filter( 'upload_mimes', 'NOLEAM\THEME\cc_mime_types' );
+
+
+/**
+ *  Palette Synchroniser customisation
+ */
+if ( ! defined( DOING_AJAX ) && ( ! defined( DOING_CRON ) ) ) {
+	Palette_Synchroniser::getInstance( [
+		'color_slugs' => [
+			'bleu-noleam',
+			'orange-noleam',
+			'vert-noleam',
+			'jaune-noleam',
+			'bleu-clair-noleam',
+			'blanc',
+			'noir',
+			'couleur-texte',
+		],
+		'prefix'      => 'name',
+		'file'        => get_stylesheet_directory() . '/assets/css/charte.css',
+	] );
+
+}
