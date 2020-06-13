@@ -4,12 +4,12 @@
 
 @font-face {
     font-family: "Hucklebuck JF Regular";
-    src: url("../fonts/Hucklebuck-JF-Regular.ttf") ;
+    src: url("../../fonts/Hucklebuck-JF-Regular.ttf") ;
 }
 
 @font-face {
     font-family: "DIN Pro Bold";
-    src: url("../fonts/DINPro-Bold.ttf") ;
+    src: url("../../fonts/DINPro-Bold.ttf") ;
 }
 
 /**CHARTE NOLEAM **/
@@ -230,8 +230,8 @@ p strong {
 }
 
 .brush {
-    font-family: var(--brush);
-    font-weight: normal;
+    font-family: var(--brush) !important;
+    font-weight: normal !important;
     transform: skewY(-5deg);
 }
 
