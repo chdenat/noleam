@@ -73,7 +73,7 @@ add_filter( 'upload_mimes', 'NOLEAM\THEME\cc_mime_types' );
 /**
  *  Palette Synchroniser customisation
  */
-if ( ! defined( DOING_AJAX ) && ( ! defined( DOING_CRON ) ) ) {
+if ( class_exists( Palette_Synchroniser::class ) ) {
 	Palette_Synchroniser::getInstance( [
 		'color_slugs' => [
 			'bleu-noleam',
