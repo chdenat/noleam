@@ -37,6 +37,35 @@
     --brush: 'Hucklebuck JF Regular';
     --texte-principal: 'Frank Ruhl Libre';
     --texte-titre: 'DIN Pro Bold';
+
+
+    /*
+     * Dimensions et couleurs fonctionnelles
+     */
+    --largeur-max: 1140px;
+
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+    --error: #dc3545;
+    --warning: var(--jaune-noleam);
+    --success: #28a745;
+}
+
+/** some mobile specifics CSS **/
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    #wpadminbar {
+        position: fixed !important; /* fix right margin on mobile */
+    }
 }
 
 
@@ -68,11 +97,6 @@
     max-width: 100vw;
 }
 
-/*.alignfull img {
-    width: 100vw;
-}
-*/
-
 .wp-block {
     max-width: 1200px !important;
     /*color: var(--);*/
@@ -102,15 +126,17 @@
     text-decoration: none;
 }
 
-/** FORMULAIRES */
+/***************************************************/
+/*  form                                           */
+/***************************************************/
 
-input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+.made-by-noleam input[type="text"], .made-by-noleam input[type="password"], .made-by-noleam input[type="date"], .made-by-noleam input[type="datetime"], .made-by-noleam input[type="email"], .made-by-noleam input[type="number"], .made-by-noleam input[type="search"], .made-by-noleam input[type="tel"], .made-by-noleam input[type="time"], .made-by-noleam input[type="url"], .made-by-noleam textarea {
     font-size: 20px;
     border: none;
     border-left: 1rem solid transparent;
 }
 
-input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+.made-by-noleam input[type="text"], .made-by-noleam input[type="password"], .made-by-noleam input[type="date"], .made-by-noleam input[type="datetime"], .made-by-noleam input[type="email"], .made-by-noleam input[type="number"], .made-by-noleam input[type="search"], .made-by-noleam input[type="tel"], .made-by-noleam input[type="time"], .made-by-noleam input[type="url"], textarea {
     background-color: var(--blanc-transparent);
     color: var(--blanc);
     padding: 0.5rem 1rem 0.7rem;
@@ -127,21 +153,28 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     transition: border-color .2s ease-in-out;
 }
 
-input[type="text"]:hover, input[type="password"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="email"]:hover, input[type="number"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="time"]:hover, input[type="url"]:hover, textarea:hover {
+.made-by-noleam input[type="text"]:hover, .made-by-noleam input[type="password"]:hover, .made-by-noleam input[type="date"]:hover, .made-by-noleam input[type="datetime"]:hover, .made-by-noleam input[type="email"]:hover, .made-by-noleam input[type="number"]:hover, .made-by-noleam input[type="search"]:hover, .made-by-noleam input[type="tel"]:hover, .made-by-noleam input[type="time"]:hover, .made-by-noleam input[type="url"]:hover, .made-by-noleam textarea:hover {
     border-left-color: var(--blanc);
 }
 
-textarea {
+.made-by-noleam textarea {
     height: 15rem;
 }
 
-label {
+.made-by-noleam label {
     color: var(--blanc);
 }
 
 /** TEXTE */
 
-body {
+.editor-styles-wrapper .block-editor-block-list__block,
+.made-by-noleam p {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+.made-by-noleam,
+.editor-styles-wrapper {
     font-family: var(--texte-principal), sans-serif;
     font-size: 1.3rem;
     line-height: 1.3;
@@ -149,7 +182,19 @@ body {
     color: var(--couleur-texte);
 }
 
-h1, h2, h3, h4 {
+.editor-styles-wrapper h1,
+.editor-post-title__input,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6,
+.made-by-noleam h1,
+.made-by-noleam h2,
+.made-by-noleam h3,
+.made-by-noleam h4,
+.made-by-noleam h5,
+.made-by-noleam h6 {
     font-family: var(--texte-titre), sans-serif;
     color: var(--bleu-clair-noleam);
     font-weight: 700;
@@ -157,16 +202,21 @@ h1, h2, h3, h4 {
 
 }
 
-h2 {
+.made-by-noleam h2,
+.editor-styles-wrapper h2 {
     font-size: 2.5rem;
 }
 
-h5, h6 {
+.made-by-noleam h5,
+.editor-styles-wrapper h5,
+.made-by-noleam h6,
+.editor-styles-wrapper h6 {
     color: var(--orange-noleam);
     font-weight: normal;
 }
 
-h6 {
+.made-by-noleam h6,
+.editor-styles-wrapper h6 {
     font-size: 2rem;
 }
 
